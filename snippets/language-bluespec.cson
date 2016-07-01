@@ -124,6 +124,8 @@
     body: '''
       
       method $1($2) = $3;
+	$0
+      endmethod
       
     '''
   module:
