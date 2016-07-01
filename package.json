@@ -1,6 +1,6 @@
 {
   "name": "language-Bluespec-System-Verilog",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bluespec System Verilog language support in Atom",
   "engines": {
     "atom": "*"
@@ -16,6 +16,5 @@
   "license": "MIT",
   "readme": "# language-bluespec\nBluespec system verilog support in Atom\n",
   "readmeFilename": "README.md",
-    "folders": []
-  }
-
+  "folders": []
+}
