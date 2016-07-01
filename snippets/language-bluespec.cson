@@ -1,0 +1,221 @@
+".source.bluespec":
+  action:
+    prefix: "action"
+    body: '''
+      
+      action
+      	$1
+      endaction
+      
+    '''
+  actionvalue:
+    prefix: "avalue"
+    body: '''
+      
+      actionvalue
+      	$1
+      endactionvalue
+      
+    '''
+  alwaysfsm:
+    prefix: "mkAlwaysFSM"
+    body: '''
+      
+      mkAlwaysFSM(seq
+      	$0
+      endseq);
+      
+    '''
+  autofsm:
+    prefix: "mkAutoFSM"
+    body: '''
+      
+      mkAutoFSM(seq
+      	$0
+      endseq);
+      
+    '''
+  begin:
+    prefix: "begin"
+    body: '''
+      
+      begin
+      	$0
+      end
+      
+    '''
+  "case-matches":
+    prefix: "casematches"
+    body: '''
+      
+      case ($1) matches
+      	tagged $0
+      endcase
+      
+    '''
+  case:
+    prefix: "case"
+    body: '''
+      
+      case ($1)
+      	$0
+      endcase
+      
+    '''
+  enum:
+    prefix: "enum"
+    body: '''
+      
+      enum {$2}
+      
+    '''
+  function:
+    prefix: "function"
+    body: '''
+      
+      function $1 $2($3) = $0;
+      
+    '''
+  import:
+    prefix: "import"
+    body: '''
+      
+      import $1::*;
+      
+    '''
+  instance:
+    prefix: "instance"
+    body: '''
+      
+      instance $1;
+      	$0
+      endinstance
+      
+    '''
+  interface:
+    prefix: "interface"
+    body: '''
+      
+      interface $1;
+      	$0
+      endinterface
+      
+    '''
+  "method-action":
+    prefix: "maction"
+    body: '''
+      
+      method Action $1($2);
+      	$3
+      endmethod
+      
+    '''
+  "method-actionvalue":
+    prefix: "mavalue"
+    body: '''
+      
+      method ActionValue#($1) $2($3);
+      	$0
+      endmethod
+      
+    '''
+  method:
+    prefix: "method"
+    body: '''
+      
+      method $1($2) = $3;
+      
+    '''
+  module:
+    prefix: "module"
+    body: '''
+      
+      module $1($2)$3;
+      
+      	$0
+      
+      endmodule
+      
+    '''
+  package:
+    prefix: "package"
+    body: '''
+      
+      package $1;
+      
+      
+      $0
+      
+      
+      endpackage
+      
+      
+    '''
+  par:
+    prefix: "par"
+    body: '''
+      
+      par
+      	$1
+      endpar
+      
+    '''
+  rule:
+    prefix: "rule"
+    body: '''
+      
+      rule $1;
+      	$0
+      endrule
+      
+    '''
+  seq:
+    prefix: "seq"
+    body: '''
+      
+      seq
+      	$1
+      endseq
+      
+    '''
+  struct:
+    prefix: "struct"
+    body: '''
+      
+      struct {
+      	$0
+      }
+      
+    '''
+  typeclass:
+    prefix: "typeclass"
+    body: '''
+      
+      typeclass $1;
+      	$0
+      endtypeclass
+      
+    '''
+  typedef:
+    prefix: "typedef"
+    body: '''
+      
+      typedef $2 $1 deriving(Eq, Bits, FShow);
+      
+    '''
+  typesyn:
+    prefix: "typesyn"
+    body: '''
+      
+      typedef $2 $1;
+      
+    '''
+  union:
+    prefix: "union"
+    body: '''
+      
+      union tagged {
+      	$0
+      }
+      
+    '''

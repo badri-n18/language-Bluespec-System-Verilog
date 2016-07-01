@@ -1,0 +1,5 @@
+".source.bluespec":
+  editor:
+    commentStart: "//"
+    increaseIndentPattern: "^\\s*(module|interface|function|typeclass|instance|action|actionvalue|rule)[^=]*[=;]$"
+    decreaseIndentPattern: "^\\s*end(module|interface|function|typeclass|instance|action|actionvalue|rule)$"

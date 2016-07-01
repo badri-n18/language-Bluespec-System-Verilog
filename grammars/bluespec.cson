@@ -1,0 +1,71 @@
+fileTypes: [
+  "bsv"
+]
+name: "Bluespec"
+patterns: [
+  {
+    begin: "//"
+    end: "$"
+    name: "comment.line.bluespec"
+  }
+  {
+    begin: "/\\*"
+    end: "\\*/"
+    name: "comment.block.bluespec"
+  }
+  {
+    match: "\\b(action|endaction|actionvalue|endactionvalue|ancestor|dependencies|determines|deriving|let|match|method|endmethod|module|endmodule|function|endfunction|par|endpar|powered_by|provisos|rule|endrule|return|rules|endrules|seq|endseq|schedule|typeclass|endtypeclass|clock|reset|noreset|no_reset|valueof|valueOf|clocked_by|reset_by|default_clock|default_reset|output_clock|output_reset|interface|endinterface|instance|import|export|endinstance|input_clock|input_reset|same_family|package|endpackage|typedef|if|else|begin|end|type|numeric|case|endcase|matches|default|for|struct|union|tagged|while|repeat|break|parameter|enum)\\b"
+    name: "keyword.other.bluespec"
+  }
+  {
+        match: '^\\s*`((cell)?define|default_(decay_time|nettype|trireg_strength)|delay_mode_(path|unit|zero)|ifdef|ifndef|include|end(if|celldefine)|else|(no)?unconnected_drive|resetall|timescale|undef)\\b'
+        name: 'keyword.other.compiler.directive.bluespec'
+      }
+  {
+    match: "[&|~><!)(*/#%@+=?:;}{,.^\\-\\[\\]]"
+    name: "keyword.operator.bluespec"
+  }
+  {
+        match: '\\$(f(open|close|gets)|readmem(b|h)|timeformat|printtimescale|stop|finish|(s|real)?time|sformatf|realtobits|bitstoreal|rtoi|itor|(f)?(display|write(h|b))|error|info|fatal|write|bits|cast)\\b'
+        name: 'support.function.system.console.tasks.bluespec'
+      }
+      {
+        match: '\\$(random|dist_(chi_square|erlang|exponential|normal|poisson|t|uniform)|urandom_range)\\b'
+        name: 'support.function.system.random_number.tasks.bluespec'
+      }
+      {
+        match: '\\$((a)?sync\\$((n)?and|(n)or)\\$(array|plane))\\b'
+        name: 'support.function.system.pld_modeling.tasks.bluespec'
+      }
+      {
+        match: '\\$(q_(initialize|add|remove|full|exam))\\b'
+        name: 'support.function.system.stochastic.tasks.bluespec'
+      }
+      {
+        match: '\\$(fullskew|hold|nochange|period|recovery|recrem|removal|setup(hold)?|skew|timeskew|width)\\b'
+        'name': 'support.function.system.timing.tasks.bluespec'
+      }
+      {
+        match: '\\$(dump(file|vars|off|on|all|limit|flush)|clog2)\\b'
+        name: 'support.function.system.vcd.tasks.bluespec'
+      }
+      {
+        match: '\\$(countdrivers|list|input|scope|showscopes|(no)?(key|log)|reset(_count|_value)?|(inc)?save|restart|showvars|getpattern|sreadmem(b|h)|scale)'
+        name: 'support.function.non-standard.tasks.bluespec'
+      }
+  {
+    match: "\\b([+-]?\\d[\\d_]*|(\\d*|[+-])?'([dD][\\d_]+|[hH][0-9a-fA-F_]+|[oO][0-7_]+|[bB][01_]+))\\b"
+    name: "constant.numeric.bluespec"
+  }
+  {
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double.bluespec"
+  }
+  {
+    match: "\\b[A-Z][A-Za-z0-9_]*"
+    name: "storage.type.bluespec"
+  }
+
+]
+scopeName: "source.bluespec"

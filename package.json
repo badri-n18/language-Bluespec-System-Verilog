@@ -1,0 +1,34 @@
+{
+  "name": "language-bluespec",
+  "version": "0.1.0",
+  "description": "Bluespec System Verilog language support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badri-n18/language-bluespec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/badri-n18/language-bluespec/issues"
+  },
+  "license": "MIT",
+  "readme": "# language-bluespec\nBluespec system verilog support in Atom\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/badri-n18/language-bluespec#readme",
+  "_id": "language-bluespec@0.1.0",
+  "_shasum": "9db93371db09bf19231d130aa1e1898fc4314247",
+  "_resolved": "file:../d-11661-15584-fzzb4r/package.tgz",
+  "_from": "../d-11661-15584-fzzb4r/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
